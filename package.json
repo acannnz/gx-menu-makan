@@ -1,0 +1,20 @@
+{
+  "name": "menu-gx",
+  "private": true,
+  "description": "Menu makan harian GX — web app + aplikasi Android dengan widget",
+  "scripts": {
+    "menu": "node tools/build-menu.js",
+    "serve": "npm run vendor && npx --yes http-server www -p 5173 -c-1",
+    "vendor": "node -e \"require('fs').mkdirSync('www/vendor',{recursive:true});require('fs').copyFileSync(require.resolve('xlsx/dist/xlsx.full.min.js'),'www/vendor/xlsx.full.min.js')\"",
+    "sync": "npm run vendor && npx cap sync android",
+    "apk": "npm run sync && cd android && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/core": "8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

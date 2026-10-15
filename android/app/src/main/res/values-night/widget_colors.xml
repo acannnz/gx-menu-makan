@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_bg">#1C1814</color>
+    <color name="widget_text">#F3ECE4</color>
+    <color name="widget_muted">#A99C8E</color>
+    <color name="widget_accent">#FF7A45</color>
+    <color name="widget_accent_soft">#3B2519</color>
+    <color name="widget_col">#27211C</color>
+    <color name="widget_chip">#342C25</color>
+    <color name="widget_pagi">#F2B544</color>
+    <color name="widget_pagi_soft">#382C14</color>
+    <color name="widget_siang">#FF7A45</color>
+    <color name="widget_siang_soft">#3D2418</color>
+    <color name="widget_sore">#A79BF5</color>
+    <color name="widget_sore_soft">#29244A</color>
+    <color name="splash_bg">#15120F</color>
+</resources>

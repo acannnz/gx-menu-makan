@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menu GX</title>
+  <meta name="description" content="Menu makan harian kantor: pagi, siang, sore">
+  <meta name="theme-color" content="#FBF7F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15120F" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #FBF7F2;
+      --surface: #FFFFFF;
+      --surface-2: #F3ECE3;
+      --text: #221C16;
+      --muted: #7A6E62;
+      --line: #EAE0D4;
+      --accent: #D9531F;
+      --accent-ink: #FFFFFF;
+      --accent-soft: #FCE6DA;
+      --pagi: #C98410;
+      --pagi-soft: #FCF0D7;
+      --siang: #D9531F;
+      --siang-soft: #FCE6DA;
+      --sore: #5B4BC4;
+      --sore-soft: #ECE9FB;
+      --shadow: 0 1px 2px rgba(60, 40, 20, .05), 0 6px 20px rgba(60, 40, 20, .06);
+      --radius: 20px;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #15120F;
+        --surface: #201B17;
+        --surface-2: #2B251F;
+        --text: #F3ECE4;
+        --muted: #A99C8E;
+        --line: #352D26;
+        --accent: #FF7A45;
+        --accent-ink: #1A0E08;
+        --accent-soft: #3B2519;
+        --pagi: #F2B544;
+        --pagi-soft: #3A2E17;
+        --siang: #FF7A45;
+        --siang-soft: #3B2519;
+        --sore: #A79BF5;
+        --sore-soft: #29244A;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.4;
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: contain;
+    }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    .wrap { max-width: 560px; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; }
+
+    /* Header + strip tanggal (sticky) */
+    .sticky {
+      position: sticky; top: 0; z-index: 5;
+      background: var(--bg);
+      padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+    }
+    .top { display: flex; align-items: center; gap: 12px; padding: 14px 16px 10px; }
+    .top .title { flex: 1; min-width: 0; }
+    .top h1 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+    .top p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .icon-btn {
+      width: 44px; height: 44px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: var(--surface); border: 1px solid var(--line);
+    }
+    .icon-btn:active { transform: scale(.96); }
+    .icon-btn svg { width: 20px; height: 20px; }
+
+    .strip {
+      display: flex; gap: 8px; overflow-x: auto;
+      padding: 4px 16px 14px;
+      scrollbar-width: none;
+      scroll-snap-type: x proximity;
+      border-bottom: 1px solid var(--line);
+    }
+    .strip::-webkit-scrollbar { display: none; }
+    .chip {
+      flex: 0 0 auto; width: 50px; height: 66px;
+      border-radius: 16px; border: 1px solid var(--line);
+      background: var(--surface);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+      scroll-snap-align: center;
+      position: relative;
+    }
+    .chip .dow { font-size: 12px; color: var(--muted); }
+    .chip .num { font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chip--empty { opacity: .45; }
+    .chip--today { border-color: var(--accent); }
+    .chip--today .num { color: var(--accent); }
+    .chip--today::after {
+      content: ""; position: absolute; bottom: 7px; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent);
+    }
+    .chip.is-selected { background: var(--accent); border-color: var(--accent); opacity: 1; }
+    .chip.is-selected .dow, .chip.is-selected .num { color: var(--accent-ink); }
+    .chip.is-selected::after { background: var(--accent-ink); }
+    .strip-sep {
+      flex: 0 0 auto; align-self: center;
+      writing-mode: vertical-rl; transform: rotate(180deg);
+      font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); padding: 0 2px;
+    }
+
+    /* Judul hari */
+    main { flex: 1; padding: 18px 0 8px; touch-action: pan-y; }
+    .day-head { display: flex; align-items: flex-end; gap: 12px; padding: 0 16px 14px; }
+    .day-head > div { flex: 1; min-width: 0; }
+    .rel {
+      margin: 0 0 2px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--accent);
+    }
+    .day-head h2 { margin: 0; font-size: 26px; letter-spacing: -.02em; line-height: 1.15; }
+    .pill {
+      border: 1px solid var(--line); background: var(--surface);
+      border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 600;
+      min-height: 40px;
+    }
+
+    /* Kartu makan */
+    .meals { display: grid; gap: 12px; padding: 0 16px; }
+    .meal {
+      background: var(--surface); border-radius: var(--radius);
+      box-shadow: var(--shadow); border: 1px solid var(--line);
+      padding: 14px 16px 16px;
+      --c: var(--pagi); --c-soft: var(--pagi-soft);
+    }
+    .meal--siang { --c: var(--siang); --c-soft: var(--siang-soft); }
+    .meal--sore { --c: var(--sore); --c-soft: var(--sore-soft); }
+    .meal.is-now { border: 2px solid var(--c); padding: 13px 15px 15px; }
+    .meal-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+    .meal-ico {
+      width: 36px; height: 36px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: var(--c-soft); color: var(--c);
+    }
+    .meal-ico svg { width: 20px; height: 20px; }
+    .meal-head h3 { margin: 0; font-size: 18px; }
+    .now {
+      font-size: 12px; font-weight: 700; color: var(--c);
+      background: var(--c-soft); border-radius: 999px; padding: 3px 9px;
+    }
+    .rice {
+      margin-left: auto; font-size: 13px; color: var(--muted);
+      background: var(--surface-2); border-radius: 999px; padding: 4px 10px;
+    }
+    .rice--special { color: var(--c); background: var(--c-soft); font-weight: 700; }
+    .dishes { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+    .dishes li { position: relative; padding-left: 18px; font-size: 16px; }
+    .dishes li::before {
+      content: ""; position: absolute; left: 3px; top: .62em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--line);
+    }
+    .dishes li.main { font-size: 18px; font-weight: 650; }
+    .dishes li.main::before { background: var(--c); }
+
+    .empty {
+      text-align: center; padding: 32px 20px;
+      background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius);
+    }
+    .empty h3 { margin: 0 0 6px; font-size: 18px; }
+    .empty p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+    .btn {
+      border: 0; border-radius: 14px; padding: 12px 18px; min-height: 44px;
+      background: var(--accent); color: var(--accent-ink); font-weight: 700;
+    }
+
+    .enter-next { animation: in-next .22s ease-out; }
+    .enter-prev { animation: in-prev .22s ease-out; }
+    @keyframes in-next { from { opacity: 0; transform: translateX(18px); } }
+    @keyframes in-prev { from { opacity: 0; transform: translateX(-18px); } }
+    @media (prefers-reduced-motion: reduce) { .enter-next, .enter-prev { animation: none; } }
+
+    footer {
+      padding: 18px 16px calc(24px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+      color: var(--muted); font-size: 13px; text-align: center;
+    }
+    footer p { margin: 0 0 4px; }
+    .link-btn {
+      border: 0; background: none; padding: 10px 6px; min-height: 44px;
+      color: var(--accent); font-weight: 600; font-size: 14px;
+    }
+
+    .toast {
+      position: fixed; left: 50%; bottom: calc(20px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+      transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+      max-width: calc(100% - 32px); width: max-content;
+      background: var(--text); color: var(--bg);
+      padding: 12px 16px; border-radius: 14px; font-size: 14px;
+      transition: opacity .2s, transform .2s; z-index: 10;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sticky">
+      <header class="top">
+        <div class="title">
+          <h1>Menu Makan</h1>
+          <p id="monthLabel">Memuat…</p>
+        </div>
+        <button id="shareBtn" class="icon-btn" type="button" aria-label="Bagikan menu tanggal ini" title="Bagikan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        </button>
+        <button id="importBtn" class="icon-btn" type="button" aria-label="Import file Excel menu" title="Import Excel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
+        </button>
+      </header>
+      <nav class="strip" id="strip" aria-label="Pilih tanggal"></nav>
+    </div>
+
+    <main id="main">
+      <div class="day-head">
+        <div>
+          <p class="rel" id="relLabel"></p>
+          <h2 id="dayTitle"></h2>
+        </div>
+        <button id="todayBtn" class="pill" type="button" hidden>Hari ini</button>
+      </div>
+      <div id="meals" class="meals" aria-live="polite"></div>
+    </main>
+
+    <footer>
+      <p id="sourceLabel"></p>
+      <p>Geser kiri/kanan untuk ganti hari</p>
+      <button id="widgetBtn" class="link-btn" type="button" hidden>Pasang widget di layar utama</button>
+      <button id="importLink" class="link-btn" type="button">Import Excel menu bulan baru</button>
+    </footer>
+  </div>
+
+  <input type="file" id="fileInput" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

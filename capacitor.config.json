@@ -1,0 +1,14 @@
+{
+  "appId": "com.menugx.app",
+  "appName": "Menu GX",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#FBF7F2"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css",
+      "style": "DEFAULT"
+    }
+  }
+}

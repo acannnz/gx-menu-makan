@@ -1,0 +1,1135 @@
+{
+ "version": 1,
+ "months": {
+  "2026-10": {
+   "month": "2026-10",
+   "label": "Oktober 2026",
+   "source": "Menu Makan GX - Oktober 2026.xlsx",
+   "generatedAt": "2026-10-15T02:39:57.840Z",
+   "days": {
+    "2026-10-01": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sup Ayam Sayur"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Rendang",
+       "Teri Cabe Hijau"
+      ],
+      [
+       "Tumis Daun Singkong"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Bumbu Rujak"
+      ],
+      [
+       "Urap Sayur"
+      ]
+     ]
+    },
+    "2026-10-02": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Jagung",
+       "Tempe Goreng"
+      ],
+      [
+       "Tumis Wortel Jagung Baby Jamur"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Tuna Goreng"
+      ],
+      [
+       "Labu Siam Tempe Kuah Santan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Mendoan",
+       "Telur Dadar"
+      ],
+      [
+       "Tumis Sawi Putih Jamur"
+      ]
+     ]
+    },
+    "2026-10-03": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Bumbu Bali",
+       "Tahu Bumbu"
+      ],
+      [
+       "Tumis Toge Kacang Panjang"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng Lengkuas"
+      ],
+      [
+       "Lalapan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Teri Balado",
+       "Bakwan Tahu"
+      ],
+      [
+       "Sayur Asem"
+      ]
+     ]
+    },
+    "2026-10-04": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng"
+      ],
+      [
+       "Tumis Wortel Sawi Hijau"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tum Ayam"
+      ],
+      [
+       "Urap Bali Paku",
+       "Kacang Merah"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Gule Ayam"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ]
+    },
+    "2026-10-05": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Tepung",
+       "Tahu Bumbu"
+      ],
+      [
+       "Tumis Sawi Putih Bakso"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng Bawang Putih"
+      ],
+      [
+       "Sayur Bening"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Uduk"
+      ],
+      [
+       "Orek Tempe",
+       "Telur Balado"
+      ],
+      [
+       "Bihun Goreng",
+       "Sambal Kacang"
+      ]
+     ]
+    },
+    "2026-10-06": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Pindang Kemangi"
+      ],
+      [
+       "Tumis Manisa"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Kuning"
+      ],
+      [
+       "Kering Tempe Kacang Tanah",
+       "Telur Balado"
+      ],
+      [
+       "Mie Goreng"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Bakar"
+      ],
+      [
+       "Sambal",
+       "Lalapan"
+      ]
+     ]
+    },
+    "2026-10-07": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng"
+      ],
+      [
+       "Capcay Sayur"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "OtakOtak Goreng Asam Manis"
+      ],
+      [
+       "Tumis Buncis Bawang Putih"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Dadar"
+      ],
+      [
+       "Lodeh Kcg Panjang Tempe Tahu"
+      ]
+     ]
+    },
+    "2026-10-08": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Jagung",
+       "Tempe Rendang"
+      ],
+      [
+       "Tumis Kol Wortel"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Soto Kediri"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Pindang Sambal Bongkot"
+      ],
+      [
+       "Tempe Goreng",
+       "Tumis Kangkung"
+      ]
+     ]
+    },
+    "2026-10-09": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Bumbu Kuning",
+       "Tahu Goreng"
+      ],
+      [
+       "Tumis Pare"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Pindang Saus Tomat"
+      ],
+      [
+       "Tumis Buncis Wortel Jagung"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Chicken Tikka Kebab"
+      ],
+      [
+       "Pickle"
+      ]
+     ]
+    },
+    "2026-10-10": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Black Pepper"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sate Marlin"
+      ],
+      [
+       "Tumis Kangkung"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tahu Cabe Garam",
+       "Fuyunghai"
+      ],
+      [
+       "Tumis Wortel Buncis"
+      ]
+     ]
+    },
+    "2026-10-11": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Tepung",
+       "Bakwan Jagung"
+      ],
+      [
+       "Tumis Pakis Toge"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Kecap"
+      ],
+      [
+       "Tumis Bunga Kol",
+       "Wortel",
+       "Baby Corn"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Goreng"
+      ],
+      [
+       "Sambal Dabu Dabu",
+       "Lalapan"
+      ]
+     ]
+    },
+    "2026-10-12": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Kare Ayam"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Bumbu",
+       "Telur Dadar"
+      ],
+      [
+       "Sayur Bening"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Cumi Asam Manis"
+      ],
+      [
+       "Tumis Sawi Hijau"
+      ]
+     ]
+    },
+    "2026-10-13": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng"
+      ],
+      [
+       "Lalapan"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Tuna Bakar"
+      ],
+      [
+       "Sayur Urap"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Tahu Black Pepper"
+      ],
+      [
+       "Sapo Tahu"
+      ]
+     ]
+    },
+    "2026-10-14": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Rendang",
+       "Kerupuk"
+      ],
+      [
+       "Tumis Daun Singkong"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tahu Bumbu"
+      ],
+      [
+       "Tumis Kol",
+       "Kacang Panjang"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sop Bandung"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ]
+    },
+    "2026-10-15": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Goreng",
+       "Oseng Bakso"
+      ],
+      [
+       "Tumis Toge Ikan Asin"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Korean Spicy Chicken"
+      ],
+      [
+       "Kimchi"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Batagor",
+       "Somay Bandung"
+      ],
+      [
+       "Sambal Kacang"
+      ]
+     ]
+    },
+    "2026-10-16": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Saus Mentega"
+      ],
+      [
+       "Tumis Pokchoy"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Pepes Ikan Tuna"
+      ],
+      [
+       "Sayur Asem"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Spaghetti Aglio Olio"
+      ],
+      [
+       "Grilled Chicken"
+      ]
+     ]
+    },
+    "2026-10-17": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Bumbu Pedas",
+       "Tahu Goreng"
+      ],
+      [
+       "Tunis Toge Wortel Buncis"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakso Ayam"
+      ],
+      [
+       "Bakwan Sayur"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Uduk"
+      ],
+      [
+       "Ikan Bumbu Pedas"
+      ],
+      [
+       "Mie Goreng"
+      ]
+     ]
+    },
+    "2026-10-18": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Pindang Tumis Cabe Hijau"
+      ],
+      [
+       "Tumis Kol Kacang Panjang"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Dadar",
+       "Tempe Mendoan"
+      ],
+      [
+       "Manisa Tahu Kuah Santan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Bakar"
+      ],
+      [
+       "Beberuk Terong"
+      ]
+     ]
+    },
+    "2026-10-19": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng Lengkuas"
+      ],
+      [
+       "Tumis Jagung Jamur Sawi Hijau"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng Bumbu Hitam"
+      ],
+      [
+       "Sambal Mangga",
+       "Lalapan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Pepes Ikan"
+      ],
+      [
+       "Plecing Kangkung"
+      ]
+     ]
+    },
+    "2026-10-20": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Bumbu Kecap",
+       "Tempe Goreng"
+      ],
+      [
+       "Tumis Buncis Terasi"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Teri Balado",
+       "Bakwan Tahu"
+      ],
+      [
+       "Sayur Asem"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bihun Kuah Ayam"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ]
+    },
+    "2026-10-21": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Bumbu Merah"
+      ],
+      [
+       "Tumis Jamur Sawi Putih"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sup Ayam Klaten"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Tahu",
+       "Usus Ayam"
+      ],
+      [
+       "Plecing Buncis Toge"
+      ]
+     ]
+    },
+    "2026-10-22": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Kotokan Pindang"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Daun Jeruk"
+      ],
+      [
+       "Kulit Ayam",
+       "Tempe Goreng"
+      ],
+      [
+       "Lalapan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Fuyung Hay"
+      ],
+      [
+       "Capcay Seafood"
+      ]
+     ]
+    },
+    "2026-10-23": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Jagung",
+       "Tempe Tepung"
+      ],
+      [
+       "Tumis Manisa"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Goreng"
+      ],
+      [
+       "Tumis Kangkung"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Chicken Nanban"
+      ],
+      [
+       "Kol"
+      ]
+     ]
+    },
+    "2026-10-24": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Kuah Santan"
+      ],
+      [
+       "Tumis Baby Corn",
+       "Bunga Kol",
+       "Wortel"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sosis",
+       "OtakOtak Singapore"
+      ],
+      [
+       "Sup Merah"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Dadar",
+       "Tempe Bumbu",
+       "Kerupuk"
+      ],
+      [
+       "Tumis Toge",
+       "Bawang Putih"
+      ]
+     ]
+    },
+    "2026-10-25": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tempe Tepung",
+       "Tahu Bumbu"
+      ],
+      [
+       "Tumis Manisa"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Geprek"
+      ],
+      [
+       "Lalapan"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Pindang Sambal Hijau"
+      ],
+      [
+       "Tumis Pare Telur"
+      ]
+     ]
+    },
+    "2026-10-26": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Goreng Serundeng"
+      ],
+      [
+       "Tumis Toge Kacang Panjang"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Jagung",
+       "Sambal Tumpang"
+      ],
+      [
+       "Sayur Pecel"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Suwir Kecombrang"
+      ],
+      [
+       "Kacang Panjang Bumbu Kalas"
+      ]
+     ]
+    },
+    "2026-10-27": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Sayur"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Opor Telur",
+       "Tahu"
+      ],
+      [
+       "Sambal Goreng Kentang"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Soto Lamongan"
+      ]
+     ]
+    },
+    "2026-10-28": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Kalasan"
+      ],
+      [
+       "Gudeg Nangka"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Sup Ikan Kuning"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Spicy Chicken"
+      ],
+      [
+       "Cheese Sauce"
+      ]
+     ]
+    },
+    "2026-10-29": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Tahu Kuah Santan"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Empal Gepuk"
+      ],
+      [
+       "Rawon"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Pepes Tahu Udang"
+      ],
+      [
+       "Sayur Bening"
+      ]
+     ]
+    },
+    "2026-10-30": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ikan Pindang Suwir Pedas"
+      ],
+      [
+       "Tumis Kol Wortel"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Bakwan Tahu",
+       "Telur Dadar"
+      ],
+      [
+       "Mie Goreng"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "TanTan Ramen"
+      ]
+     ]
+    },
+    "2026-10-31": {
+     "pagi": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Telur Bumbu Pedas"
+      ],
+      [
+       "Tumis Buncis Tempe Telur"
+      ]
+     ],
+     "siang": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Ayam Saus Telur Asin"
+      ],
+      [
+       "Kerupuk"
+      ]
+     ],
+     "sore": [
+      [
+       "Nasi Putih"
+      ],
+      [
+       "Tuna Goreng"
+      ],
+      [
+       "Sambel Dabu Dabu",
+       "Lalapan"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

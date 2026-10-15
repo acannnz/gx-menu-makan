@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Menu GX</string>
+    <string name="title_activity_main">Menu GX</string>
+    <string name="package_name">com.menugx.app</string>
+    <string name="custom_url_scheme">com.menugx.app</string>
+    <string name="widget_description">Menu makan hari ini: pagi, siang, sore</string>
+    <string name="widget_empty">Belum ada menu untuk tanggal ini. Buka aplikasi lalu import Excel menu bulan ini.</string>
+</resources>

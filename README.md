@@ -3,6 +3,7 @@
 Aplikasi kecil untuk melihat menu makan kantor per hari di HP Android, **lengkap dengan widget layar utama**.
 
 - Buka aplikasi → langsung tampil menu **hari ini** (Pagi / Siang / Sore). Geser kiri/kanan untuk pindah hari.
+  Tampilan bisa diganti antara **kolom** (seperti widget) dan **kartu** lewat tombol di kanan atas; mulai jam 20.00 ada tombol "Besok →".
 - **Widget** menampilkan menu hari ini dalam 3 kolom (Pagi | Siang | Sore): jenis nasi, lauk utama, dan pelengkap. Jam makan yang sedang berlangsung disorot. Mulai jam 20.00 widget menampilkan menu besok. Contoh tampilan: `dist/widget-gelap.png`, `dist/widget-terang.png`.
 - Menu bulan baru bisa di-import langsung dari HP: tombol ⬆, lalu pilih file Excel dari kantor.
 

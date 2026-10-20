@@ -1,6 +1,6 @@
 // Cache supaya aplikasi tetap terbuka walau sinyal jelek / offline.
 // Naikkan VERSION kalau ingin memaksa semua HP mengambil ulang file aplikasi.
-const VERSION = 'menugx-v2';
+const VERSION = 'menugx-v3';
 const SHELL = ['./', 'index.html', 'app.js', 'parser.js', 'menu.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/favicon.png'];
 

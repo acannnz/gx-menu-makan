@@ -9,6 +9,9 @@
   var MEAL_LABEL = { pagi: 'Pagi', siang: 'Siang', sore: 'Sore' };
   // Perkiraan jam makan untuk tanda "Sekarang" (menit sejak 00:00) — sesuaikan dengan jadwal kantor
   var NOW_SLOTS = [['pagi', 0, 10 * 60], ['siang', 10 * 60, 15 * 60], ['sore', 15 * 60, 24 * 60]];
+  // Mulai jam ini muncul tombol "Besok →" (sama dengan SHOW_TOMORROW_FROM di widget)
+  var SHOW_TOMORROW_FROM = 20 * 60;
+  var VIEW_KEY = 'menugx.view';
   var HARI = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
   var HARI_PENDEK = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
   var BULAN = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
@@ -17,6 +20,9 @@
     pagi: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8M4.9 10.9l1.4 1.4M2 18h2M20 18h2M19.1 10.9l-1.4 1.4M22 22H2M8 6l4-4 4 4M16 18a4 4 0 0 0-8 0"/></svg>',
     siang: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>',
     sore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 10V2M4.9 10.9l1.4 1.4M2 18h2M20 18h2M19.1 10.9l-1.4 1.4M22 22H2M16 6l-4 4-4-4M16 18a4 4 0 0 0-8 0"/></svg>',
+    cols: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M15 3v18"/></svg>',
+    cards: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18"/></svg>',
+    calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   };
 
   var $ = function (id) { return document.getElementById(id); };
@@ -35,6 +41,7 @@
   function keyOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
   function parseKey(k) { var p = k.split('-'); return new Date(+p[0], p[1] - 1, +p[2]); }
   function todayKey() { return keyOf(new Date()); }
+  function addDays(k, n) { var d = parseKey(k); d.setDate(d.getDate() + n); return keyOf(d); }
   function diffDays(a, b) { return Math.round((parseKey(a) - parseKey(b)) / 86400000); }
   function menuFor(k) { var m = months[k.slice(0, 7)]; return (m && m.days[k]) || null; }
   function esc(s) {
@@ -102,7 +109,7 @@
     $('strip').innerHTML = range.map(function (k, i) {
       var d = parseKey(k);
       var sep = d.getDate() === 1 && i > 0 ? '<span class="strip-sep">' + BULAN[d.getMonth()].slice(0, 3) + '</span>' : '';
-      var cls = 'chip' + (menuFor(k) ? '' : ' chip--empty') + (k === t ? ' chip--today' : '');
+      var cls = 'chip' + (menuFor(k) ? (k < t ? ' chip--past' : '') : ' chip--empty') + (k === t ? ' chip--today' : '');
       return sep + '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' +
         HARI[d.getDay()] + ' ' + d.getDate() + ' ' + BULAN[d.getMonth()] + '">' +
         '<span class="dow">' + HARI_PENDEK[d.getDay()] + '</span><span class="num">' + d.getDate() + '</span></button>';
@@ -131,8 +138,8 @@
         '<span class="meal-ico">' + ICONS[meal] + '</span>' +
         '<h3>' + MEAL_LABEL[meal] + '</h3>' +
         (isNow ? '<span class="now">Sekarang</span>' : '') +
-        (rice ? '<span class="rice' + (special ? ' rice--special' : '') + '">' + esc(rice) + '</span>' : '') +
       '</header>' +
+      (rice ? '<span class="rice' + (special ? ' rice--special' : '') + '">' + esc(rice) + '</span>' : '') +
       '<ul class="dishes">' +
         main.map(function (x) { return '<li class="main">' + esc(x) + '</li>'; }).join('') +
         sides.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') +
@@ -140,7 +147,8 @@
   }
 
   function emptyState() {
-    return '<div class="empty"><h3>Belum ada menu untuk tanggal ini</h3>' +
+    return '<div class="empty"><span class="meal-ico">' + ICONS.calendar + '</span>' +
+      '<h3>Belum ada menu untuk tanggal ini</h3>' +
       '<p>Import file Excel menu bulan ini supaya menunya muncul.</p>' +
       '<button type="button" class="btn" data-action="import">Import Excel</button></div>';
   }
@@ -159,6 +167,8 @@
     $('relLabel').textContent = relLabel(diff);
     $('dayTitle').textContent = HARI[d.getDay()] + ', ' + d.getDate() + ' ' + BULAN[d.getMonth()];
     $('todayBtn').hidden = diff === 0;
+    var nowMin = new Date().getHours() * 60 + new Date().getMinutes();
+    $('tomorrowBtn').hidden = !(diff === 0 && nowMin >= SHOW_TOMORROW_FROM && range.indexOf(addDays(k, 1)) !== -1);
     $('monthLabel').textContent = month ? month.label : BULAN[d.getMonth()] + ' ' + d.getFullYear();
     $('sourceLabel').textContent = month && month.source ? 'Sumber: ' + month.source : '';
 
@@ -277,8 +287,29 @@
   }
 
   function updateWidgetButton(info) {
-    // Tombol muncul kalau widget belum dipasang
-    $('widgetBtn').hidden = !(info && info.widgets === 0);
+    // Ajakan muncul kalau widget belum dipasang
+    $('widgetCard').hidden = !(info && info.widgets === 0);
+  }
+
+  // ---------- Tampilan kolom / kartu ----------
+  function getView() {
+    try { return localStorage.getItem(VIEW_KEY) === 'cards' ? 'cards' : 'cols'; } catch (e) { return 'cols'; }
+  }
+
+  function applyView(view) {
+    var cols = view === 'cols';
+    $('meals').classList.toggle('meals--cols', cols);
+    // Tombol menampilkan tampilan yang akan dipilih berikutnya
+    $('viewBtn').innerHTML = cols ? ICONS.cards : ICONS.cols;
+    $('viewBtn').setAttribute('aria-label', cols ? 'Tampilan kartu' : 'Tampilan kolom');
+  }
+
+  var view = getView();
+
+  function toggleView() {
+    view = view === 'cols' ? 'cards' : 'cols';
+    try { localStorage.setItem(VIEW_KEY, view); } catch (e) { /* tetap berlaku untuk sesi ini */ }
+    applyView(view);
   }
 
   // ---------- Event ----------
@@ -288,6 +319,8 @@
       if (chip) select(chip.getAttribute('data-k'));
     });
     $('todayBtn').addEventListener('click', function () { select(todayKey()); });
+    $('tomorrowBtn').addEventListener('click', function () { select(addDays(todayKey(), 1)); });
+    $('viewBtn').addEventListener('click', toggleView);
     $('shareBtn').addEventListener('click', share);
     var pick = function () { $('fileInput').click(); };
     $('importBtn').addEventListener('click', pick);
@@ -329,6 +362,7 @@
 
   function init() {
     bind();
+    applyView(view);
     var local = readLocal();
     loadHosted().then(function (hosted) {
       months = merge(hosted, local);

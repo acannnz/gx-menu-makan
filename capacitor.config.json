@@ -3,7 +3,7 @@
   "appName": "Menu GX",
   "webDir": "www",
   "android": {
-    "backgroundColor": "#FBF7F2"
+    "backgroundColor": "#FFFBF6"
   },
   "plugins": {
     "SystemBars": {

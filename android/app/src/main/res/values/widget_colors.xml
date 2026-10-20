@@ -2,16 +2,16 @@
 <resources>
     <color name="widget_bg">#FFFBF6</color>
     <color name="widget_text">#221C16</color>
-    <color name="widget_muted">#7A6E62</color>
-    <color name="widget_accent">#D9531F</color>
+    <color name="widget_muted">#6B5F53</color>
+    <color name="widget_accent">#B03C10</color>
     <color name="widget_accent_soft">#FCE6DA</color>
     <color name="widget_col">#F4EDE4</color>
     <color name="widget_chip">#FFFFFF</color>
-    <color name="widget_pagi">#B97609</color>
+    <color name="widget_pagi">#8C5900</color>
     <color name="widget_pagi_soft">#FCEFD3</color>
-    <color name="widget_siang">#D9531F</color>
+    <color name="widget_siang">#B03C10</color>
     <color name="widget_siang_soft">#FDE4D7</color>
     <color name="widget_sore">#5B4BC4</color>
     <color name="widget_sore_soft">#ECE8FD</color>
-    <color name="splash_bg">#FBF7F2</color>
+    <color name="splash_bg">#FFFBF6</color>
 </resources>
